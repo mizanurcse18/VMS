@@ -1,0 +1,1068 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{3848AE24-A3D3-4BF7-943E-42C27CA458DA}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS.Web.UI</RootNamespace>
+    <AssemblyName>PS.Web.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Autofac, Version=3.5.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.3.5.2\lib\net40\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Integration.WebApi, Version=3.0.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Autofac.WebApi.3.1.0\lib\net40\Autofac.Integration.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.1\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Owin, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Owin.2.2.1\lib\net45\Microsoft.AspNet.Identity.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Cors, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.HttpListener">
+      <HintPath>..\packages\Microsoft.Owin.Host.HttpListener.3.0.1\lib\net45\Microsoft.Owin.Host.HttpListener.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Host.SystemWeb, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Host.SystemWeb.3.0.1\lib\net45\Microsoft.Owin.Host.SystemWeb.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.3.0.1\lib\net45\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.1.0.0, Culture=neutral, PublicKeyToken=e44a2bc38ed2c13c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Mvc">
+      <HintPath>..\packages\Unity.Mvc.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.6.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="OwinEnvironment, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\OwinEnvironment.1.1.0\lib\OwinEnvironment.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.0.0\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Owin">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Owin.5.2.3\lib\net45\System.Web.Http.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.5.0.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.0.0\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.1\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.0.0\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.0.0\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.WebApi">
+      <HintPath>..\packages\Unity.WebAPI.5.1\lib\net45\Unity.WebApi.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\assets\" />
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\Bootstrapper.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="App_Start\UnityResolver.cs" />
+    <Compile Include="App_Start\Utility\MisUtil.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
+    <Compile Include="Controllers\BaseApiController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\Vehicle\AreaApiController.cs" />
+    <Compile Include="Controllers\Vehicle\BrandApiController.cs" />
+    <Compile Include="Controllers\Vehicle\HREmployeeApiController.cs" />
+    <Compile Include="Controllers\Vehicle\HREmployeeTypeApiController.cs" />
+    <Compile Include="Controllers\Vehicle\InspactionApiController.cs" />
+    <Compile Include="Controllers\Vehicle\InspactionDetailApiController.cs" />
+    <Compile Include="Controllers\Vehicle\IssueApiController.cs" />
+    <Compile Include="Controllers\Vehicle\IssueStatusApiController.cs" />
+    <Compile Include="Controllers\Vehicle\VehicleApiController.cs" />
+    <Compile Include="Controllers\Vehicle\VehicleGroupApiController.cs" />
+    <Compile Include="Controllers\Vehicle\VehicleStatusApiController.cs" />
+    <Compile Include="Controllers\Vehicle\VehicleTypeApiController.cs" />
+    <Compile Include="Controllers\Vehicle\VendorApiController.cs" />
+    <Compile Include="Controllers\Vehicle\VendorTypeApiController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\CamelCaseStringEnumConverter.cs" />
+    <Compile Include="Helpers\ErrorResult.cs" />
+    <Compile Include="Helpers\JSendMessageHandler.cs" />
+    <Compile Include="Helpers\JSendPayload.cs" />
+    <Compile Include="Helpers\JSendStatus.cs" />
+    <Compile Include="Helpers\OkResult.cs" />
+    <Compile Include="Helpers\Renders.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\LoginModel.cs" />
+    <Compile Include="Models\LoginResponse.cs" />
+    <Compile Include="Models\MasterDataConstants.cs" />
+    <Compile Include="Models\TreePageItem.cs" />
+    <Compile Include="Models\TreeViewNode.cs" />
+    <Compile Include="Models\TreeViewPageNode.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\bower_components\tree-datatable-helpers\dataTable.helpers.js" />
+    <Content Include="app\directives\FileSaver.js" />
+    <Content Include="app\styles\dataTable.css" />
+    <Content Include="app\styles\icons.css" />
+    <Content Include="app\styles\material.css" />
+    <Content Include="app\bower_components\angular-hotkeys\build\hotkeys.css" />
+    <Content Include="app\bower_components\angular-hotkeys\build\hotkeys.js" />
+    <Content Include="app\bower_components\angular-hotkeys\build\hotkeys.min.css" />
+    <Content Include="app\bower_components\angular-hotkeys\build\hotkeys.min.js" />
+    <Content Include="app\bower_components\angular-hotkeys\Gruntfile.js" />
+    <Content Include="app\bower_components\angular-hotkeys\src\hotkeys.css" />
+    <Content Include="app\bower_components\angular-hotkeys\src\hotkeys.js" />
+    <Content Include="app\services\accountsApiService.js" />
+    <Content Include="app\directives\userAvatar.js" />
+    <Content Include="app\styles\app.css" />
+    <Content Include="app\bower_components\angular-material-icons\angular-material-icons.css" />
+    <Content Include="app\bower_components\angular-material-icons\angular-material-icons.js" />
+    <Content Include="app\bower_components\angular-material-icons\angular-material-icons.min.js" />
+    <Content Include="app\bower_components\angular-material-icons\demo.js" />
+    <Content Include="app\bower_components\angular-material-icons\gulpfile.js" />
+    <Content Include="app\bower_components\angular-material-icons\index.html" />
+    <Content Include="app\bower_components\angular-material-icons\index.js" />
+    <Content Include="app\bower_components\angular-route\angular-route.js" />
+    <Content Include="app\bower_components\angular-route\angular-route.min.js" />
+    <Content Include="app\bower_components\angular-route\index.js" />
+    <Content Include="app\app.js" />
+    <Content Include="app\styles\index.css" />
+    <Content Include="app\views\account\accountCtrl.js" />
+    <Content Include="app\views\account\account.html" />
+    <Content Include="app\views\home\index.html" />
+    <Content Include="app\mainCtrl.js" />
+    <Content Include="app\views\home\indexCtrl.js" />
+    <Content Include="app\views\menu\sidenav.html" />
+    <Content Include="app\views\menu\toolbar-header.html" />
+    <Content Include="app\views\vehicle\engine_and_transmission.html" />
+    <Content Include="app\views\vehicle\fluids.html" />
+    <Content Include="app\views\vehicle\index.html" />
+    <Content Include="app\views\vehicle\specifications.html" />
+    <Content Include="app\views\vehicle\vehicleList.html" />
+    <Content Include="app\views\vehicle\details.html" />
+    <Content Include="app\views\vehicle\vehicleCtrl.js" />
+    <Content Include="app\views\vehicle\wheels_tires.html" />
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.js" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.min.js" />
+    <Content Include="app\bower_components\angular-animate\index.js" />
+    <Content Include="app\bower_components\angular-aria\angular-aria.js" />
+    <Content Include="app\bower_components\angular-aria\angular-aria.min.js" />
+    <Content Include="app\bower_components\angular-aria\index.js" />
+    <Content Include="app\bower_components\angular-material\.gitignore" />
+    <Content Include="app\bower_components\angular-material\angular-material-mocks.js" />
+    <Content Include="app\bower_components\angular-material\angular-material.css" />
+    <Content Include="app\bower_components\angular-material\angular-material.js" />
+    <Content Include="app\bower_components\angular-material\angular-material.min.css" />
+    <Content Include="app\bower_components\angular-material\angular-material.min.js" />
+    <Content Include="app\bower_components\angular-material\index.js" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layout-attributes.css" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layout-attributes.min.css" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layouts.css" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layouts.ie_fixes.css" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layouts.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\autocomplete\autocomplete-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\autocomplete\autocomplete-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\autocomplete\autocomplete.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\autocomplete\autocomplete.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\autocomplete\autocomplete.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\autocomplete\autocomplete.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\backdrop\backdrop-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\backdrop\backdrop-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\backdrop\backdrop.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\backdrop\backdrop.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\backdrop\backdrop.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\backdrop\backdrop.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\bottomSheet\bottomSheet-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\bottomSheet\bottomSheet-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\bottomSheet\bottomSheet.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\bottomSheet\bottomSheet.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\bottomSheet\bottomSheet.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\bottomSheet\bottomSheet.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\button\button-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\button\button-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\button\button.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\button\button.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\button\button.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\button\button.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\card\card-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\card\card-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\card\card.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\card\card.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\card\card.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\card\card.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\checkbox\checkbox-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\checkbox\checkbox-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\checkbox\checkbox.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\checkbox\checkbox.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\checkbox\checkbox.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\checkbox\checkbox.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\chips\chips-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\chips\chips-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\chips\chips.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\chips\chips.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\chips\chips.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\chips\chips.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\colors\colors.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\colors\colors.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\content\content-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\content\content-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\content\content.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\content\content.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\content\content.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\content\content.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\core-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\core-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\core.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\core.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\core.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\core.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\core\default-theme.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\datepicker\datepicker-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\datepicker\datepicker-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\datepicker\datepicker.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\datepicker\datepicker.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\datepicker\datepicker.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\datepicker\datepicker.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\dialog\dialog-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\dialog\dialog-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\dialog\dialog.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\dialog\dialog.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\dialog\dialog.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\dialog\dialog.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\divider\divider-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\divider\divider-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\divider\divider.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\divider\divider.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\divider\divider.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\divider\divider.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabActions\fabActions.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabActions\fabActions.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabSpeedDial\fabSpeedDial.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabSpeedDial\fabSpeedDial.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabSpeedDial\fabSpeedDial.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabSpeedDial\fabSpeedDial.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabToolbar\fabToolbar.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabToolbar\fabToolbar.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabToolbar\fabToolbar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabToolbar\fabToolbar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabTrigger\fabTrigger.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\fabTrigger\fabTrigger.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\gridList\gridList-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\gridList\gridList.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\gridList\gridList.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\gridList\gridList.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\gridList\gridList.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\icon\icon-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\icon\icon-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\icon\icon.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\icon\icon.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\icon\icon.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\icon\icon.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\input\input-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\input\input-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\input\input.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\input\input.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\input\input.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\input\input.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\list\list-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\list\list-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\list\list.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\list\list.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\list\list.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\list\list.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menuBar\menuBar-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menuBar\menuBar-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menuBar\menuBar.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menuBar\menuBar.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menuBar\menuBar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menuBar\menuBar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menu\menu-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menu\menu-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menu\menu.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menu\menu.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menu\menu.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\menu\menu.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\navBar\navBar-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\navBar\navBar-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\navBar\navBar.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\navBar\navBar.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\navBar\navBar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\navBar\navBar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\panel\panel-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\panel\panel-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\panel\panel.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\panel\panel.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\panel\panel.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\panel\panel.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressCircular\progressCircular-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressCircular\progressCircular-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressCircular\progressCircular.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressCircular\progressCircular.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressCircular\progressCircular.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressCircular\progressCircular.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressLinear\progressLinear-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressLinear\progressLinear-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressLinear\progressLinear.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressLinear\progressLinear.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressLinear\progressLinear.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\progressLinear\progressLinear.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\radioButton\radioButton-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\radioButton\radioButton-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\radioButton\radioButton.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\radioButton\radioButton.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\radioButton\radioButton.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\radioButton\radioButton.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\select\select-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\select\select-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\select\select.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\select\select.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\select\select.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\select\select.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\showHide\showHide.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\showHide\showHide.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sidenav\sidenav-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sidenav\sidenav-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sidenav\sidenav.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sidenav\sidenav.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sidenav\sidenav.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sidenav\sidenav.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\slider\slider-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\slider\slider-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\slider\slider.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\slider\slider.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\slider\slider.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\slider\slider.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sticky\sticky.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sticky\sticky.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sticky\sticky.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\sticky\sticky.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\subheader\subheader-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\subheader\subheader-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\subheader\subheader.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\subheader\subheader.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\subheader\subheader.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\subheader\subheader.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\swipe\swipe.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\swipe\swipe.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\switch\switch-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\switch\switch-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\switch\switch.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\switch\switch.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\switch\switch.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\switch\switch.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs-arrow.svg" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tabs\tabs.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\textField\textField-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\textField\textField.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\textField\textField.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toast\toast-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toast\toast-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toast\toast.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toast\toast.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toast\toast.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toast\toast.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toolbar\toolbar-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toolbar\toolbar-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toolbar\toolbar.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toolbar\toolbar.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toolbar\toolbar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\toolbar\toolbar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tooltip\tooltip-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tooltip\tooltip-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tooltip\tooltip.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tooltip\tooltip.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tooltip\tooltip.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\tooltip\tooltip.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\virtualRepeat\virtualRepeat.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\virtualRepeat\virtualRepeat.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\virtualRepeat\virtualRepeat.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\virtualRepeat\virtualRepeat.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\whiteframe\whiteframe.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\whiteframe\whiteframe.js" />
+    <Content Include="app\bower_components\angular-material\modules\closure\whiteframe\whiteframe.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\closure\whiteframe\whiteframe.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\autocomplete-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\autocomplete-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\autocomplete.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\autocomplete.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\autocomplete.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\autocomplete.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\backdrop-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\backdrop-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\backdrop.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\backdrop.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\backdrop.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\backdrop.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bottomSheet-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bottomSheet-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bottomSheet.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bottomSheet.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bottomSheet.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bottomSheet.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\button-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\button-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\button.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\button.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\button.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\button.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\card-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\card-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\card.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\card.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\card.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\card.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\checkbox-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\checkbox-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\checkbox.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\checkbox.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\checkbox.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\checkbox.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\chips-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\chips-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\chips.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\chips.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\chips.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\chips.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\colors\colors.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\colors\colors.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\content-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\content-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\content.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\content.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\content.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\content.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\core-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\core-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\core.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\core.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\core.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\core.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\default-theme.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\datepicker-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\datepicker-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\datepicker.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\datepicker.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\datepicker.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\datepicker.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\dialog-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\dialog-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\dialog.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\dialog.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\dialog.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\dialog.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\divider-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\divider-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\divider.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\divider.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\divider.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\divider.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabActions\fabActions.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabActions\fabActions.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabSpeedDial\fabSpeedDial.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabSpeedDial\fabSpeedDial.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabSpeedDial\fabSpeedDial.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabSpeedDial\fabSpeedDial.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabToolbar\fabToolbar.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabToolbar\fabToolbar.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabToolbar\fabToolbar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabToolbar\fabToolbar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabTrigger\fabTrigger.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabTrigger\fabTrigger.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\gridList\gridList.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\gridList\gridList.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\gridList\gridList.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\gridList\gridList.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\icon-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\icon-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\icon.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\icon.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\icon.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\icon.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\input-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\input-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\input.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\input.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\input.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\input.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\list-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\list-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\list.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\list.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\list.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\list.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\menuBar-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\menuBar-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\menuBar.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\menuBar.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\menuBar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\menuBar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\menu-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\menu-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\menu.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\menu.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\menu.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\menu.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\navBar-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\navBar-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\navBar.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\navBar.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\navBar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\navBar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\panel-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\panel-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\panel.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\panel.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\panel.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\panel.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\progressCircular-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\progressCircular-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\progressCircular.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\progressCircular.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\progressCircular.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\progressCircular.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\progressLinear-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\progressLinear-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\progressLinear.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\progressLinear.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\progressLinear.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\progressLinear.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\radioButton-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\radioButton-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\radioButton.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\radioButton.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\radioButton.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\radioButton.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\select-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\select-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\select.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\select.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\select.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\select.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\showHide\showHide.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\showHide\showHide.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\sidenav-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\sidenav-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\sidenav.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\sidenav.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\sidenav.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\sidenav.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\slider-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\slider-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\slider.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\slider.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\slider.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\slider.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\sticky\sticky.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\sticky\sticky.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\sticky\sticky.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\sticky\sticky.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\subheader-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\subheader-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\subheader.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\subheader.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\subheader.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\subheader.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\swipe\swipe.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\swipe\swipe.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\switch-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\switch-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\switch.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\switch.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\switch.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\switch.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\tabs-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\tabs-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\tabs.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\tabs.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\tabs.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\tabs.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\textField-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\textField-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\textField.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\textField.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\textField.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\textField.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\toast-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\toast-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\toast.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\toast.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\toast.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\toast.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\toolbar-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\toolbar-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\toolbar.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\toolbar.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\toolbar.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\toolbar.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\tooltip-default-theme.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\tooltip-default-theme.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\tooltip.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\tooltip.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\tooltip.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\tooltip.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\virtualRepeat\virtualRepeat.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\virtualRepeat\virtualRepeat.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\virtualRepeat\virtualRepeat.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\virtualRepeat\virtualRepeat.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\whiteframe\whiteframe.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\whiteframe\whiteframe.js" />
+    <Content Include="app\bower_components\angular-material\modules\js\whiteframe\whiteframe.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\js\whiteframe\whiteframe.min.js" />
+    <Content Include="app\bower_components\angular-material\modules\layouts\angular-material.layout-attributes.css" />
+    <Content Include="app\bower_components\angular-material\modules\layouts\angular-material.layout-attributes.min.css" />
+    <Content Include="app\bower_components\angular-material\modules\layouts\angular-material.layouts.css" />
+    <Content Include="app\bower_components\angular-material\modules\layouts\angular-material.layouts.ie_fixes.css" />
+    <Content Include="app\bower_components\angular-material\modules\layouts\angular-material.layouts.min.css" />
+    <Content Include="app\bower_components\angular-messages\angular-messages.js" />
+    <Content Include="app\bower_components\angular-messages\angular-messages.min.js" />
+    <Content Include="app\bower_components\angular-messages\index.js" />
+    <Content Include="app\bower_components\angular\angular-csp.css" />
+    <Content Include="app\bower_components\angular\angular.js" />
+    <Content Include="app\bower_components\angular\angular.min.js" />
+    <Content Include="app\bower_components\angular\index.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\animatedCircle.gif" />
+    <Content Include="Images\animatedEllipse.gif" />
+    <Content Include="Images\file.png" />
+    <Content Include="Images\folder-closed.png" />
+    <Content Include="Images\folder.png" />
+    <Content Include="Images\icons\addShoppingCart.svg" />
+    <Content Include="Images\icons\android.svg" />
+    <Content Include="Images\icons\angular-logo.svg" />
+    <Content Include="Images\icons\bower-logo.svg" />
+    <Content Include="Images\icons\cake.svg" />
+    <Content Include="Images\icons\car.svg" />
+    <Content Include="Images\icons\codepen-logo.svg" />
+    <Content Include="Images\icons\copy.svg" />
+    <Content Include="Images\icons\copy2.svg" />
+    <Content Include="Images\icons\delete.svg" />
+    <Content Include="Images\icons\facebook.svg" />
+    <Content Include="Images\icons\favorite.svg" />
+    <Content Include="Images\icons\github-icon.svg" />
+    <Content Include="Images\icons\github.svg" />
+    <Content Include="Images\icons\hangout.svg" />
+    <Content Include="Images\icons\ic_access_time_24px.svg" />
+    <Content Include="Images\icons\ic_arrow_back_24px.svg" />
+    <Content Include="Images\icons\ic_build_24px.svg" />
+    <Content Include="Images\icons\ic_card_giftcard_24px.svg" />
+    <Content Include="Images\icons\ic_chevron_right_24px.svg" />
+    <Content Include="Images\icons\ic_close_24px.svg" />
+    <Content Include="Images\icons\ic_code_24px.svg" />
+    <Content Include="Images\icons\ic_comment_24px.svg" />
+    <Content Include="Images\icons\ic_email_24px.svg" />
+    <Content Include="Images\icons\ic_euro_24px.svg" />
+    <Content Include="Images\icons\ic_insert_drive_file_24px.svg" />
+    <Content Include="Images\icons\ic_label_24px.svg" />
+    <Content Include="Images\icons\ic_launch_24px.svg" />
+    <Content Include="Images\icons\ic_menu_24px.svg" />
+    <Content Include="Images\icons\ic_more_vert_24px.svg" />
+    <Content Include="Images\icons\ic_ondemand_video_24px.svg" />
+    <Content Include="Images\icons\ic_people_24px.svg" />
+    <Content Include="Images\icons\ic_person_24px.svg" />
+    <Content Include="Images\icons\ic_phone_24px.svg" />
+    <Content Include="Images\icons\ic_photo_24px.svg" />
+    <Content Include="Images\icons\ic_place_24px.svg" />
+    <Content Include="Images\icons\ic_play_arrow_24px.svg" />
+    <Content Include="Images\icons\ic_play_circle_fill_24px.svg" />
+    <Content Include="Images\icons\ic_refresh_24px.svg" />
+    <Content Include="Images\icons\ic_school_24px.svg" />
+    <Content Include="Images\icons\ic_visibility_24px.svg" />
+    <Content Include="Images\icons\launch.svg" />
+    <Content Include="Images\icons\list_control_down.png" />
+    <Content Include="Images\icons\mail.svg" />
+    <Content Include="Images\icons\menu.svg" />
+    <Content Include="Images\icons\message.svg" />
+    <Content Include="Images\icons\more_vert.svg" />
+    <Content Include="Images\icons\npm-logo.svg" />
+    <Content Include="Images\icons\octicon-repo.svg" />
+    <Content Include="Images\icons\pencil.svg" />
+    <Content Include="Images\icons\print.svg" />
+    <Content Include="Images\icons\separator.svg" />
+    <Content Include="Images\icons\sets\communication-icons.svg" />
+    <Content Include="Images\icons\sets\core-icons.svg" />
+    <Content Include="Images\icons\sets\device-icons.svg" />
+    <Content Include="Images\icons\sets\social-icons.svg" />
+    <Content Include="Images\icons\share-arrow.svg" />
+    <Content Include="Images\icons\tabs-arrow.svg" />
+    <Content Include="Images\icons\toggle-arrow.svg" />
+    <Content Include="Images\icons\twitter.svg" />
+    <Content Include="Images\icons\upload.svg" />
+    <Content Include="Images\indicator.white.gif" />
+    <Content Include="Images\loader-indicator.gif" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\spinner3-greenie.gif" />
+    <Content Include="ng-upload-sample.html" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <Content Include="bower.json" />
+    <Content Include="app\bower_components\angular-animate\.bower.json" />
+    <Content Include="app\bower_components\angular-animate\angular-animate.min.js.map" />
+    <Content Include="app\bower_components\angular-animate\bower.json" />
+    <Content Include="app\bower_components\angular-animate\LICENSE.md" />
+    <Content Include="app\bower_components\angular-animate\package.json" />
+    <Content Include="app\bower_components\angular-animate\README.md" />
+    <Content Include="app\bower_components\angular-aria\.bower.json" />
+    <Content Include="app\bower_components\angular-aria\angular-aria.min.js.map" />
+    <Content Include="app\bower_components\angular-aria\bower.json" />
+    <Content Include="app\bower_components\angular-aria\LICENSE.md" />
+    <Content Include="app\bower_components\angular-aria\package.json" />
+    <Content Include="app\bower_components\angular-aria\README.md" />
+    <Content Include="app\bower_components\angular-material\.bower.json" />
+    <Content Include="app\bower_components\angular-material\angular-material.scss" />
+    <Content Include="app\bower_components\angular-material\bower.json" />
+    <Content Include="app\bower_components\angular-material\CHANGELOG.md" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layout-attributes.scss" />
+    <Content Include="app\bower_components\angular-material\layouts\angular-material.layouts.scss" />
+    <Content Include="app\bower_components\angular-material\LICENSE" />
+    <Content Include="app\bower_components\angular-material\modules\js\autocomplete\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\backdrop\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\bottomSheet\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\button\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\card\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\checkbox\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\chips\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\colors\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\content\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\core\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\datepicker\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\dialog\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\divider\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabActions\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabSpeedDial\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabToolbar\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\fabTrigger\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\gridList\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\icon\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\input\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\list\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\menuBar\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\menu\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\navBar\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\panel\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressCircular\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\progressLinear\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\radioButton\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\select\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\showHide\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\sidenav\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\slider\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\sticky\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\subheader\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\swipe\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\switch\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\tabs\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\textField\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\toast\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\toolbar\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\tooltip\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\virtualRepeat\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\js\whiteframe\bower.json" />
+    <Content Include="app\bower_components\angular-material\modules\scss\angular-material.layout-attributes.scss" />
+    <Content Include="app\bower_components\angular-material\modules\scss\angular-material.layouts.scss" />
+    <Content Include="app\bower_components\angular-material\modules\scss\angular-material.scss" />
+    <Content Include="app\bower_components\angular-material\package.json" />
+    <Content Include="app\bower_components\angular-material\README.md" />
+    <Content Include="app\bower_components\angular-messages\.bower.json" />
+    <Content Include="app\bower_components\angular-messages\angular-messages.min.js.map" />
+    <Content Include="app\bower_components\angular-messages\bower.json" />
+    <Content Include="app\bower_components\angular-messages\LICENSE.md" />
+    <Content Include="app\bower_components\angular-messages\package.json" />
+    <Content Include="app\bower_components\angular-messages\README.md" />
+    <Content Include="app\bower_components\angular\.bower.json" />
+    <Content Include="app\bower_components\angular\angular.min.js.gzip" />
+    <Content Include="app\bower_components\angular\angular.min.js.map" />
+    <Content Include="app\bower_components\angular\bower.json" />
+    <Content Include="app\bower_components\angular\LICENSE.md" />
+    <Content Include="app\bower_components\angular\package.json" />
+    <Content Include="app\bower_components\angular\README.md" />
+    <Content Include="typings\angular-material\angular-material.d.ts" />
+    <Content Include="typings\angularjs\angular.d.ts" />
+    <Content Include="typings\jquery\jquery.d.ts" />
+    <Content Include="typings\tsd.d.ts" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PS.Data\PS.Data.csproj">
+      <Project>{a18239af-a5af-44d4-93dc-58842f4dc72a}</Project>
+      <Name>PS.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Framework\PS.Framework.csproj">
+      <Project>{2db03314-0eab-4193-82ec-d9e7a57f18a8}</Project>
+      <Name>PS.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Infrastructure\PS.Infrastructure.csproj">
+      <Project>{ee70552e-6202-4e47-bd9e-15da5449f1b9}</Project>
+      <Name>PS.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Model\PS.Model.csproj">
+      <Project>{9433f1ef-c492-4570-ba39-5db01936521f}</Project>
+      <Name>PS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Service\PS.Service.csproj">
+      <Project>{e0984d4c-bc73-4d05-af79-78d5594ad919}</Project>
+      <Name>PS.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include=".bowerrc" />
+    <Content Include="app\bower_components\angular-material-icons\.bower.json" />
+    <Content Include="app\bower_components\angular-material-icons\bower.json" />
+    <Content Include="app\bower_components\angular-material-icons\LICENSE" />
+    <Content Include="app\bower_components\angular-material-icons\package.json" />
+    <Content Include="app\bower_components\angular-material-icons\README.md" />
+    <Content Include="app\bower_components\angular-route\.bower.json" />
+    <Content Include="app\bower_components\angular-route\angular-route.min.js.map" />
+    <Content Include="app\bower_components\angular-route\bower.json" />
+    <Content Include="app\bower_components\angular-route\LICENSE.md" />
+    <Content Include="app\bower_components\angular-route\package.json" />
+    <Content Include="app\bower_components\angular-route\README.md" />
+    <Content Include="app\styles\datatable.scss" />
+    <Content Include="app\bower_components\angular-hotkeys\.bower.json" />
+    <Content Include="app\bower_components\angular-hotkeys\bower.json" />
+    <Content Include="app\bower_components\angular-hotkeys\LICENSE" />
+    <Content Include="app\bower_components\angular-hotkeys\package.json" />
+    <Content Include="app\bower_components\angular-hotkeys\README.md" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\web.config" />
+    <None Include="Properties\PublishProfiles\VMS.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>14718</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:14718/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

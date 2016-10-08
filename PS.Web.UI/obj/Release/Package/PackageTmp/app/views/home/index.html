@@ -1,0 +1,30 @@
+<div>
+    <form name="form">
+        <md-input-container class="md-block">
+            <label>ID</label>
+            <input md-maxlength="10"  name="ID" ng-model="person.ID">
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Name</label>
+            <input md-maxlength="10" name="Name" ng-model="person.Name" />
+        </md-input-container>
+        <div>
+            <md-button type="submit" ng-click="ShowAlert()">Submit</md-button>
+        </div>
+        <h1>{{textChanged}}</h1>
+    </form>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Edit</th>
+        </tr>
+        <tr ng-repeat="d in data">
+            <td>{{d.ID}}</td>
+            <td>{{d.Name}}</td>
+            <td><md-button type="submit" ng-click="edit(d)">Edit</md-button></td>
+        </tr>
+    </table>
+
+</div>
+

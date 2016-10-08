@@ -1,0 +1,24 @@
+<div>
+    <h1>Add Vehicle</h1>
+    <md-tabs flex md-border-bottom="" md-align-tabs="top" style="min-height:450px !important">
+        <md-tab label="Details">
+            <md-content class="md-padding">
+                <h1 class="md-display-2">Create Vendor</h1>
+                <div ng-include="'app/views/vendor/vendor.html'"></div>
+            </md-content>
+        </md-tab>
+        <md-tab label="Specifications">
+            <h1 class="md-display-2">Vendor List</h1>
+            <md-content class="md-padding">
+                <div ng-include="'app/views/vendor/specifications.html'"></div>
+            </md-content>
+        </md-tab>
+    <div layout-gt-sm="row">
+        <md-button type="submit" ng-click="save(vendor)" class="md-raised">
+            <ng-md-icon icon="save"></ng-md-icon>
+            {{entryButtonStatus}}
+        </md-button>
+        <md-button ng-click="reset()" type="button" class="md-accent md-raised md-hue-1">Reset</md-button>
+    </div>
+</div>
+

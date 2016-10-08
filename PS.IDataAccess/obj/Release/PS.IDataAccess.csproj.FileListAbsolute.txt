@@ -1,0 +1,9 @@
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Release\PS.IDataAccess.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Release\PS.IDataAccess.pdb
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Release\PS.Model.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Release\EntityFramework.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Release\PS.Model.pdb
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Release\EntityFramework.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\obj\Release\PS.IDataAccess.csprojResolveAssemblyReference.cache
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\obj\Release\PS.IDataAccess.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\obj\Release\PS.IDataAccess.pdb

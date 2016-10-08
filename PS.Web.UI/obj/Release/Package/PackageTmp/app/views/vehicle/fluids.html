@@ -1,0 +1,18 @@
+<div class="padded" style="padding: 30px;" md-whiteframe="{{height}}" flex="100" flex-gt-xs="100" layout-align="center center"
+     ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
+    <div class="md-inline-form" layout="column">
+        <form name="form" novalidate id="top">
+            <h2>Fuel</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Fuel Type</label>
+                    <input type="number" name="name" ng-model="Vehicle.name">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Fuel Tank 1 Capacity</label>
+                    <input type="number" name="name" ng-model="Vehicle.name">
+                </md-input-container>
+            </div>
+        </form>
+    </div>
+</div>

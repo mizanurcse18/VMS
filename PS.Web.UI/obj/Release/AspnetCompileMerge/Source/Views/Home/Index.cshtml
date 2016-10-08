@@ -1,0 +1,61 @@
+﻿
+
+<!DOCTYPE html>
+<html lang="en" ng-app="vehicleManagementSystem">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400.500.700.400italic" />
+    <link rel="stylesheet" href="~/app/bower_components/angular-material/angular-material.min.css" />
+    <link rel="stylesheet" href="~/app/bower_components/angular-material-icons/angular-material-icons.css" />
+    <link rel="stylesheet" href="~/app/styles/app.css" />
+    <link href="~/app/bower_components/angular-hotkeys/build/hotkeys.css" rel="stylesheet" />
+    <link href="~/app/styles/icons.css" rel="stylesheet" />
+    <link href="~/app/styles/material.css" rel="stylesheet" />
+    <link href="~/app/styles/dataTable.css" rel="stylesheet" />
+    @*<a href="~/app/styles/datatable.scss"></a>*@
+    <link href="~/app/styles/index.css" rel="stylesheet" />
+    <style type="text/css">
+        [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+            display: none !important;
+        }
+    </style>
+
+</head>
+<body flex layout="row" ng-cloak ng-controller="mainCtrl">
+    @*<body layout="row">*@
+    <div ng-include="'app/views/menu/sidenav.html'" layout="vertical">
+    </div>
+    <div layout="column" flex>
+        <div ng-include="'app/views/menu/toolbar-header.html'"></div>
+        <md-content flex layout="column">
+            <div ng-view></div>
+        </md-content>
+    </div>
+    <div id="vendorsJsFiles">
+        <script src="~/app/bower_components/angular/angular.min.js"></script>
+
+        <script src="~/app/bower_components/angular-material/angular-material.min.js"></script>
+        <script src="~/app/bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="~/app/bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="~/app/bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="~/app/bower_components/angular-material-icons/angular-material-icons.min.js"></script>
+        <script src="~/app/bower_components/angular-route/angular-route.min.js"></script>
+        <script src="~/app/bower_components/angular-hotkeys/build/hotkeys.js"></script>
+
+    </div>
+    <div id="inHouseJsFiles">
+        <script src="~/app/app.js"></script>
+        <script src="~/app/mainCtrl.js"></script>
+        <script src="~/app/views/home/indexCtrl.js"></script>
+        <script src="~/app/views/vehicle/vehicleCtrl.js"></script>
+        <script src="~/app/views/account/accountCtrl.js"></script>
+        <script src="~/app/services/accountsApiService.js"></script>
+        <script src="~/app/directives/userAvatar.js"></script>
+        <script src="~/app/bower_components/tree-datatable-helpers/dataTable.helpers.js"></script>
+        <script src="~/app/directives/FileSaver.js"></script>
+
+    </div>
+</body>
+</html>
