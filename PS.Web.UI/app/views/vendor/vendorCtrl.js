@@ -1,11 +1,11 @@
 (function (app) {
     'use strict';
 
-    app.controller('vehicleCtrl', vehicleCtrl);
+    app.controller('vendorCtrl', vendorCtrl);
 
-    vehicleCtrl.$inject = ['$scope'];
+    vendorCtrl.$inject = ['$scope'];
 
-    function vehicleCtrl($scope) {
+    function vendorCtrl($scope) {
         $scope.entryButtonStatus = "Save";
     }
 })(angular.module('vehicleManagementSystem'));
