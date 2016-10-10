@@ -1,0 +1,62 @@
+<div class="white-bg md-whiteframe-4dp">
+        <table class="dataTable stripe row-border hover" datatable="ng" dt-options="dtOptions">
+            <thead>
+                <tr>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">SL#</span>
+                        </div>
+                    </th>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">Name</span>
+                        </div>
+                    </th>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">Code</span>
+                        </div>
+                    </th>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">Parent Head</span>
+                        </div>
+                    </th>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">Class</span>
+                        </div>
+                    </th>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">Edit</span>
+                        </div>
+                    </th>
+                    <th class="secondary-text">
+                        <div class="table-header">
+                            <span class="column-title">Delete</span>
+                        </div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="acHead in acHeadList">
+                    <td>{{$index+1}}</td>
+                    <td>{{acHead.name}}</td>
+                    <td>{{acHead.code}}</td>
+                    <td>{{acHead.acHead2.name}}</td>
+                    <td>{{acHead.acClass.name}}</td>
+                    <td>
+                        <md-button class="md-icon-button" ng-click="edit(acHead)">
+                            <md-icon md-svg-icon="edit"></md-icon>
+                        </md-button>
+                    </td>
+                    <td>
+                        <md-button class="md-icon-button" ng-click="delete(acHead.id)">
+                            <md-icon md-svg-icon="delete"></md-icon>
+                        </md-button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>

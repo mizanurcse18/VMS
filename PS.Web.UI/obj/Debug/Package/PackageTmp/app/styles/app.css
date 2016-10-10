@@ -1,0 +1,58 @@
+html, body {
+    font-family: 'Roboto',sans-serif;
+    font-size: 14px;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+md-toolbar h1 {
+    font-size: 1.25em;
+    font-weight: 400;
+    margin: auto;
+}
+
+md-toolbar .md-toolbar-tools h1 {
+    font-size: 1.250em;
+    font-weight: 400;
+}
+
+#content {
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 5px;
+}
+
+
+.dt {
+    width: 75%;
+    margin: 50px auto;
+    height: 400px;
+}
+
+.dt-depth-0 > div > .dt-cell {
+    font-weight: 500;
+}
+
+.dt-depth-1 > div > .dt-tree-col {
+    text-indent: 25px;
+}
+
+.dt-depth-2 > div > .dt-tree-col {
+    text-indent: 35px;
+}
+
+.dt-tree-col {
+    padding-left: 35px !important;
+}
+
+.dt-tree-toggle {
+    position: absolute;
+    left: 5px;
+    line-height: 40px;
+}
+
+.textarea {
+    max-height: 70px;
+    overflow: auto;
+}

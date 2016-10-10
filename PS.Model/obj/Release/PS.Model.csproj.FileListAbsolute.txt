@@ -1,0 +1,11 @@
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\PS.Model.dll.config
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\PS.Model.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\PS.Model.pdb
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\EntityFramework.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\EntityFramework.SqlServer.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\EntityFramework.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\bin\Release\EntityFramework.SqlServer.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Release\PS.Model.Resources.resources
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Release\PS.Model.csproj.GenerateResource.Cache
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Release\PS.Model.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Release\PS.Model.pdb

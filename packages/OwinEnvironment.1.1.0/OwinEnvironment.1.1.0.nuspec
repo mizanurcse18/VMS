@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>OwinEnvironment</id>
+    <version>1.1.0</version>
+    <title>Owin Environment Helpers</title>
+    <authors>Bilal Haidar</authors>
+    <owners>Bilal Haidar</owners>
+    <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Strongly-typed properties for OWIN Environment Data (Request, Response, and Other).</description>
+    <summary />
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+</package>

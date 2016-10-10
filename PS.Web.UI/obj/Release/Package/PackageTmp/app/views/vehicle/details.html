@@ -1,0 +1,262 @@
+<div class="padded" style="padding: 30px;" md-whiteframe="{{height}}" flex="100" flex-gt-xs="100" layout-align="center center"
+     ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
+
+    <div class="md-inline-form" layout="column">
+        <form name="form" novalidate id="top">
+            <h2>Identification</h2>
+            <div layout-gt-xs="row" ng-hide="true">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <input ng-model="Vehicle.id">
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Name</label>
+                    <input required name="name" ng-model="Vehicle.name">
+                    <div ng-messages="form.name.$error" ng-show="form.name.$dirty || form.$submitted">
+                        <div ng-message="required">Accounts Head name Required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>VIN/SN</label>
+                    <input name="name" ng-model="Vehicle.name">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Year</label>
+                    <input type="number" name="name" ng-model="Vehicle.name">
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Type</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Make</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Model</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Trim</label>
+                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>License Plate</label>
+                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Registration State/Province</label>
+                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                </md-input-container>
+            </div>
+            <md-divider></md-divider>
+            <h2>Classification</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Make</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Make</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Model</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Model</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+            </div>
+            <md-divider></md-divider>
+            <h2>Additional Details</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Make</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Make</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Registration State/Province</label>
+                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                </md-input-container>
+           </div>
+        </form>
+    </div>
+</div>

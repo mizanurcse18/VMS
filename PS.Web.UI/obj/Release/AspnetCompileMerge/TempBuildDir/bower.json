@@ -1,0 +1,22 @@
+{
+  "name": "angular-matrial-install",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Mizan"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.1",
+    "angular-material-icons": "^0.7.1"
+  }
+}

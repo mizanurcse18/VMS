@@ -1,0 +1,17 @@
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\PS.Data.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\PS.Data.pdb
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\EntityFramework.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\EntityFramework.Extended.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\EntityFramework.SqlServer.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\Microsoft.AspNet.Identity.Core.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\PS.Model.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\PS.Model.pdb
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\EntityFramework.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\EntityFramework.Extended.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\EntityFramework.SqlServer.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\Microsoft.AspNet.Identity.Core.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\obj\Release\PS.Data.csprojResolveAssemblyReference.cache
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\obj\Release\PS.Data.dll
+E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\obj\Release\PS.Data.pdb

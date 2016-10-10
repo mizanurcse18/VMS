@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15AFEBD7-2D3C-4158-995E-E95A3EE4C3C0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS.DataAccess</RootNamespace>
+    <AssemblyName>PS.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DABase.cs" />
+    <Compile Include="DAExtensions.cs" />
+    <Compile Include="DataAccessUtils.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vehicle\DAArea.cs" />
+    <Compile Include="Vehicle\DABrand.cs" />
+    <Compile Include="Vehicle\DAHREmployee.cs" />
+    <Compile Include="Vehicle\DAHREmployeeType.cs" />
+    <Compile Include="Vehicle\DAInspaction.cs" />
+    <Compile Include="Vehicle\DAInspactionDetail.cs" />
+    <Compile Include="Vehicle\DAIssue.cs" />
+    <Compile Include="Vehicle\DAIssueStatus.cs" />
+    <Compile Include="Vehicle\DAVehicle.cs" />
+    <Compile Include="Vehicle\DAVehicleGroup.cs" />
+    <Compile Include="Vehicle\DAVehicleStatus.cs" />
+    <Compile Include="Vehicle\DAVehicleType.cs" />
+    <Compile Include="Vehicle\DAVendor.cs" />
+    <Compile Include="Vehicle\DAVendorType.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PS.IDataAccess\PS.IDataAccess.csproj">
+      <Project>{0beb3127-dd03-48ce-b975-17f32db1d546}</Project>
+      <Name>PS.IDataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Model\PS.Model.csproj">
+      <Project>{9433f1ef-c492-4570-ba39-5db01936521f}</Project>
+      <Name>PS.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
