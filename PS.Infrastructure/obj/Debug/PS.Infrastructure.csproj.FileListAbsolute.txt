@@ -110,3 +110,38 @@ E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Infrastructure\bin\Debug\System.Web.
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Infrastructure\obj\Debug\PS.Infrastructure.csprojResolveAssemblyReference.cache
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Infrastructure\obj\Debug\PS.Infrastructure.dll
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Infrastructure\obj\Debug\PS.Infrastructure.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\PS.Infrastructure.dll.config
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\PS.Infrastructure.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\PS.Infrastructure.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\EntityFramework.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\log4net.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Owin.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\OwinEnvironment.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\ServiceStack.Interfaces.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\ServiceStack.Redis.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\System.Web.Mvc.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\log4net.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\ServiceStack.Redis.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\bin\Debug\System.Web.Mvc.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.csprojResolveAssemblyReference.cache
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.pdb

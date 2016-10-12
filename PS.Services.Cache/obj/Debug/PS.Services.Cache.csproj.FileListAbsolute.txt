@@ -61,3 +61,24 @@ E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Services.Cache\bin\Debug\log4net.xml
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Services.Cache\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Services.Cache\bin\Debug\EntityFramework.dll
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Services.Cache\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\PS.Services.Cache.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\PS.Services.Cache.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\PS.Infrastructure.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\PS.Model.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\ServiceStack.Redis.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\log4net.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\ServiceStack.Interfaces.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\EntityFramework.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\Owin.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\PS.Infrastructure.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\PS.Model.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\ServiceStack.Redis.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\log4net.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.csprojResolveAssemblyReference.cache
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.pdb

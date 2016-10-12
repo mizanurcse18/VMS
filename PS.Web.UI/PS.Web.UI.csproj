@@ -304,6 +304,9 @@
     <Content Include="app\styles\index.css" />
     <Content Include="app\views\account\accountCtrl.js" />
     <Content Include="app\views\account\account.html" />
+    <Content Include="app\views\contacts\index.html" />
+    <Content Include="app\views\contacts\contacts.html" />
+    <Content Include="app\views\contacts\contactsCtrl.js" />
     <Content Include="app\views\home\index.html" />
     <Content Include="app\mainCtrl.js" />
     <Content Include="app\views\home\indexCtrl.js" />
@@ -317,6 +320,10 @@
     <Content Include="app\views\vehicle\details.html" />
     <Content Include="app\views\vehicle\vehicleCtrl.js" />
     <Content Include="app\views\vehicle\wheels_tires.html" />
+    <Content Include="app\views\vendor\index.html" />
+    <Content Include="app\views\vendor\vendor.html" />
+    <Content Include="app\views\vendor\vendorCtrl.js" />
+    <Content Include="app\views\vendor\vendorList.html" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="app\bower_components\angular-animate\angular-animate.js" />
     <Content Include="app\bower_components\angular-animate\angular-animate.min.js" />

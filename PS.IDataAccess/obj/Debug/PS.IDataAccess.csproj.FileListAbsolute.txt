@@ -25,3 +25,12 @@ E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Debug\PS.Model.dll
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Debug\PS.Model.pdb
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Debug\EntityFramework.dll
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.IDataAccess\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\bin\Debug\PS.IDataAccess.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\bin\Debug\PS.IDataAccess.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\bin\Debug\PS.Model.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\bin\Debug\EntityFramework.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\bin\Debug\PS.Model.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\obj\Debug\PS.IDataAccess.csprojResolveAssemblyReference.cache
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\obj\Debug\PS.IDataAccess.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.IDataAccess\obj\Debug\PS.IDataAccess.pdb

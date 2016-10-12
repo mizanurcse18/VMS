@@ -34,3 +34,15 @@ E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Debug\PS.Model.Resources.r
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Debug\PS.Model.csproj.GenerateResource.Cache
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Debug\PS.Model.dll
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Model\obj\Debug\PS.Model.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\PS.Model.dll.config
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\PS.Model.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\PS.Model.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\EntityFramework.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.csprojResolveAssemblyReference.cache
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.Resources.resources
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.csproj.GenerateResource.Cache
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.pdb
