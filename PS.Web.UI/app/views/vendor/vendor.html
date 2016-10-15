@@ -18,7 +18,7 @@
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Phone Number</label>
-                    <input type="number" name="name" ng-model="Vendor.name">
+                    <input type="number" name="phoneNumber" ng-model="Vendor.phoneNumber">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
@@ -88,6 +88,13 @@
                     <label>Phone</label>
                     <input type="number" name="name" ng-model="Vendor.name">
                 </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-button type="submit" ng-click="save(vendor)">
+                    <ng-md-icon icon="save"></ng-md-icon>
+                    {{entryButtonStatus}}
+                </md-button>
+                <md-button ng-click="reset()"><ng-md-icon icon="refresh"></ng-md-icon>Reset</md-button>
             </div>
         </form>
     </div>

@@ -39,6 +39,10 @@
                 templateUrl: 'app/views/vendor/index.html',
                 controller: 'vendorCtrl'
             })
+            .when("/contacts", {
+                templateUrl: 'app/views/contacts/index.html',
+                controller: 'contactsCtrl'
+            })
             .when("/voucher/:voucherType", {
                 templateUrl: 'app/views/voucher/voucher.html',
                 controller: 'voucherCtrl'

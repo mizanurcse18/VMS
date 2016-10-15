@@ -240,20 +240,20 @@
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\BaseApiController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\Vehicle\AreaApiController.cs" />
-    <Compile Include="Controllers\Vehicle\BrandApiController.cs" />
-    <Compile Include="Controllers\Vehicle\HREmployeeApiController.cs" />
-    <Compile Include="Controllers\Vehicle\HREmployeeTypeApiController.cs" />
-    <Compile Include="Controllers\Vehicle\InspactionApiController.cs" />
-    <Compile Include="Controllers\Vehicle\InspactionDetailApiController.cs" />
-    <Compile Include="Controllers\Vehicle\IssueApiController.cs" />
-    <Compile Include="Controllers\Vehicle\IssueStatusApiController.cs" />
-    <Compile Include="Controllers\Vehicle\VehicleApiController.cs" />
-    <Compile Include="Controllers\Vehicle\VehicleGroupApiController.cs" />
-    <Compile Include="Controllers\Vehicle\VehicleStatusApiController.cs" />
-    <Compile Include="Controllers\Vehicle\VehicleTypeApiController.cs" />
-    <Compile Include="Controllers\Vehicle\VendorApiController.cs" />
-    <Compile Include="Controllers\Vehicle\VendorTypeApiController.cs" />
+    <Compile Include="Controllers\VMS\AreaApiController.cs" />
+    <Compile Include="Controllers\VMS\BrandApiController.cs" />
+    <Compile Include="Controllers\VMS\HREmployeeApiController.cs" />
+    <Compile Include="Controllers\VMS\HREmployeeTypeApiController.cs" />
+    <Compile Include="Controllers\VMS\InspactionApiController.cs" />
+    <Compile Include="Controllers\VMS\InspactionDetailApiController.cs" />
+    <Compile Include="Controllers\VMS\IssueApiController.cs" />
+    <Compile Include="Controllers\VMS\IssueStatusApiController.cs" />
+    <Compile Include="Controllers\VMS\VehicleApiController.cs" />
+    <Compile Include="Controllers\VMS\VehicleGroupApiController.cs" />
+    <Compile Include="Controllers\VMS\VehicleStatusApiController.cs" />
+    <Compile Include="Controllers\VMS\VehicleTypeApiController.cs" />
+    <Compile Include="Controllers\VMS\VendorApiController.cs" />
+    <Compile Include="Controllers\VMS\VendorTypeApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -287,7 +287,7 @@
     <Content Include="app\bower_components\angular-hotkeys\Gruntfile.js" />
     <Content Include="app\bower_components\angular-hotkeys\src\hotkeys.css" />
     <Content Include="app\bower_components\angular-hotkeys\src\hotkeys.js" />
-    <Content Include="app\services\accountsApiService.js" />
+    <Content Include="app\services\vehicleManagementSystemApiService.js" />
     <Content Include="app\directives\userAvatar.js" />
     <Content Include="app\styles\app.css" />
     <Content Include="app\bower_components\angular-material-icons\angular-material-icons.css" />
