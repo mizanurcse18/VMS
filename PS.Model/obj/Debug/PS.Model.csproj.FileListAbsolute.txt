@@ -46,3 +46,15 @@ E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.csproj.GenerateResource.Cache
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.dll
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Model\obj\Debug\PS.Model.pdb
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\PS.Model.dll.config
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\PS.Model.dll
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\PS.Model.pdb
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\EntityFramework.SqlServer.dll
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Model\bin\Debug\EntityFramework.SqlServer.xml
+F:\Kayser\VMSGit\VMS\PS.Model\obj\Debug\PS.Model.csprojResolveAssemblyReference.cache
+F:\Kayser\VMSGit\VMS\PS.Model\obj\Debug\PS.Model.Resources.resources
+F:\Kayser\VMSGit\VMS\PS.Model\obj\Debug\PS.Model.csproj.GenerateResource.Cache
+F:\Kayser\VMSGit\VMS\PS.Model\obj\Debug\PS.Model.dll
+F:\Kayser\VMSGit\VMS\PS.Model\obj\Debug\PS.Model.pdb

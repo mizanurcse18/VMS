@@ -145,3 +145,42 @@ E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastru
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.csprojResolveAssemblyReference.cache
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.dll
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.pdb
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\PS.Infrastructure.dll.config
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\PS.Infrastructure.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\PS.Infrastructure.pdb
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\EntityFramework.SqlServer.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\log4net.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.OAuth.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Newtonsoft.Json.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\OwinEnvironment.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\ServiceStack.Interfaces.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\ServiceStack.Redis.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\System.Web.Http.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\System.Web.Mvc.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\System.Net.Http.Formatting.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\EntityFramework.SqlServer.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\log4net.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Microsoft.Owin.Security.OAuth.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\Newtonsoft.Json.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\ServiceStack.Redis.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\System.Web.Http.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\System.Web.Mvc.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\bin\Debug\System.Net.Http.Formatting.xml
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.csprojResolveAssemblyReference.cache
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.dll
+F:\Kayser\VMSGit\VMS\PS.Infrastructure\obj\Debug\PS.Infrastructure.pdb

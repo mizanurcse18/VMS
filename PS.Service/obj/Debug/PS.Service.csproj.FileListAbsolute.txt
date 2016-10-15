@@ -130,3 +130,36 @@ E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Service\b
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Service\obj\Debug\PS.Service.csprojResolveAssemblyReference.cache
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Service\obj\Debug\PS.Service.dll
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Service\obj\Debug\PS.Service.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Service.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Service.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\EntityFramework.SqlServer.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Data.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.DataAccess.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.IDataAccess.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Infrastructure.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Model.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\ServiceStack.Redis.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\log4net.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\ServiceStack.Interfaces.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.DataAccess.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Data.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.IDataAccess.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Infrastructure.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\PS.Model.pdb
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\EntityFramework.SqlServer.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.Owin.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\ServiceStack.Redis.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\log4net.xml
+F:\Kayser\VMSGit\VMS\PS.Service\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+F:\Kayser\VMSGit\VMS\PS.Service\obj\Debug\PS.Service.csprojResolveAssemblyReference.cache
+F:\Kayser\VMSGit\VMS\PS.Service\obj\Debug\PS.Service.dll
+F:\Kayser\VMSGit\VMS\PS.Service\obj\Debug\PS.Service.pdb

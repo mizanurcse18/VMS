@@ -8,49 +8,23 @@
                     <input ng-model="Contacts.id">
                 </md-input-container>
             </div>
+
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Name</label>
-                    <input required name="name" ng-model="Contacts.name">
-                    <div ng-messages="form.name.$error" ng-show="form.name.$dirty || form.$submitted">
-                        <div ng-message="required">Full Name is Required.</div>
-                    </div>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Phone Number</label>
-                    <input type="number" name="name" ng-model="Vendor.name">
-                </md-input-container>
-            </div>
-            <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Address</label>
-                    <textarea name="name" ng-model="Vendor.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Address 2</label>
-                    <textarea name="name" ng-model="Vendor.name"></textarea>
-                </md-input-container>
-            </div>
-            <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>WebSite</label>
-                    <input name="name" ng-model="Vendor.name">
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Country</label>
+                    <label>Select Type</label>
                     <md-autocomplete ng-disabled="isDisabled"
-                                     ng-model="Vendor.type"
+                                     ng-model="Contacts.type"
                                      md-search-text="searchText"
                                      md-no-cache="noCache"
                                      md-selected-item="selectedItem"
                                      md-search-text-change="searchTextChange(searchText)"
-                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-selected-item-change="selectedItemChange(Contacts)"
                                      md-items="item in querySearch(searchText)"
-                                     md-item-text="item.name"
+                                     md-item-text="Contacts.type"
                                      md-min-length="0"
                                      placeholder="Write you Head Name here.">
                         <md-item-template>
-                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{item.name}}</span>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{Contacts.type}}</span>
                         </md-item-template>
                         <md-not-found>
                             No Action matching "{{searchText}}" were found.
@@ -59,34 +33,120 @@
                     </md-autocomplete>
                 </md-input-container>
             </div>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Code</label>
+                    <input type="code" required name="code" ng-model="Contacts.code">
+                    <div ng-messages="form.code.$error" ng-show="form.code.$dirty || form.$submitted">
+                        <div ng-message="required">Code is Required.</div>
+                    </div>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Full Name</label>
+                    <input required name="name" ng-model="Contacts.name">
+                    <div ng-messages="form.name.$error" ng-show="form.name.$dirty || form.$submitted">
+                        <div ng-message="required">Full Name is Required.</div>
+                    </div>
+                </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Date Of Birth</label>
+                    <input required name="dateOfBirth" ng-model="Contacts.dateOfBirth" type="Date">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Designation</label>
+                    <textarea name="designation" ng-model="Contacts.designation"></textarea>
+                </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Joining Date</label>
+                    <input required name="joiningDate" ng-model="Contacts.joiningDate" type="Date">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Leave Date</label>
+                    <input required name="leaveDate" ng-model="Contacts.leaveDate" type="Date">
+                </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Curent Address</label>
+                    <textarea name="curentAddress" ng-model="Contacts.curentAddress"></textarea>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>ParmanentAddress</label>
+                    <textarea name="parmanentAddress" ng-model="Contacts.parmanentAddress"></textarea>
+                </md-input-container>
+            </div>
+
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>City</label>
-                    <input name="name" ng-model="Vendor.name">
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Contacts.city"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-selected-item-change="selectedItemChange(Contacts)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="Contacts.city"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{Contacts.city}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
+
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>State/Province/Region</label>
-                    <input name="name" ng-model="Vendor.name">
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Zip/Postal Code</label>
-                    <input name="name" ng-model="Vendor.name">
+                    <label>Country</label>
+                    <input name="country" value="Bangladesh" ng-model="Contacts.country">
                 </md-input-container>
             </div>
             <md-divider></md-divider>
-            <h2>Contact Person</h2>
+            <h2>Contact Information</h2>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Contact Name</label>
-                    <input name="name" ng-model="Vendor.name">
+                    <label>Primary Contact Number</label>
+                    <input name="contactNumber1" ng-model="Contacts.contactNumber1">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Secondary Contact Number</label>
+                    <input name="contactNumber2" ng-model="Contacts.contactNumber2">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Email</label>
-                    <input name="name" ng-model="Vendor.name">
+                    <input name="email" ng-model="Contacts.email">
+                </md-input-container>
+            </div>
+
+            <md-divider></md-divider>
+            <h2>Identification Information</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>National ID Number</label>
+                    <input name="nIDNumber" ng-model="Contacts.nIDNumber">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Phone</label>
-                    <input type="number" name="name" ng-model="Vendor.name">
+                    <label>Driving Licence Number</label>
+                    <input name="drivingLicenceNumber" ng-model="Contacts.drivingLicenceNumber">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Hourly Cost</label>
+                    <input name="hourlyCost" ng-model="Contacts.hourlyCost">
                 </md-input-container>
             </div>
         </form>

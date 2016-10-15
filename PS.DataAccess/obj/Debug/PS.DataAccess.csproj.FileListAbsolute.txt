@@ -42,3 +42,14 @@ E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.DataAcces
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.DataAccess\obj\Debug\PS.DataAccess.csprojResolveAssemblyReference.cache
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.DataAccess\obj\Debug\PS.DataAccess.dll
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.DataAccess\obj\Debug\PS.DataAccess.pdb
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\PS.DataAccess.dll
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\PS.DataAccess.pdb
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\PS.IDataAccess.dll
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\PS.Model.dll
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\PS.IDataAccess.pdb
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\PS.Model.pdb
+F:\Kayser\VMSGit\VMS\PS.DataAccess\bin\Debug\EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.DataAccess\obj\Debug\PS.DataAccess.csprojResolveAssemblyReference.cache
+F:\Kayser\VMSGit\VMS\PS.DataAccess\obj\Debug\PS.DataAccess.dll
+F:\Kayser\VMSGit\VMS\PS.DataAccess\obj\Debug\PS.DataAccess.pdb

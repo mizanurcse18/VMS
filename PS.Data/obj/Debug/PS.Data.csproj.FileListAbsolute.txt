@@ -66,3 +66,20 @@ E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\obj\Debug\PS.Data.csprojResolveAssemblyReference.cache
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\obj\Debug\PS.Data.dll
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\obj\Debug\PS.Data.pdb
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\PS.Data.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\PS.Data.pdb
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\EntityFramework.Extended.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\EntityFramework.SqlServer.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\PS.Model.dll
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\PS.Model.pdb
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\EntityFramework.Extended.xml
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\EntityFramework.SqlServer.xml
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+F:\Kayser\VMSGit\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Data\obj\Debug\PS.Data.csprojResolveAssemblyReference.cache
+F:\Kayser\VMSGit\VMS\PS.Data\obj\Debug\PS.Data.dll
+F:\Kayser\VMSGit\VMS\PS.Data\obj\Debug\PS.Data.pdb

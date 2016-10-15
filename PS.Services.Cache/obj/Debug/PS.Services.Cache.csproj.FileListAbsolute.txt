@@ -82,3 +82,24 @@ E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.csprojResolveAssemblyReference.cache
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.dll
 E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.pdb
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\PS.Services.Cache.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\PS.Services.Cache.pdb
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\PS.Infrastructure.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\PS.Model.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\ServiceStack.Redis.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\log4net.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.Host.SystemWeb.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\ServiceStack.Interfaces.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\EntityFramework.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\Owin.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\PS.Infrastructure.pdb
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\PS.Model.pdb
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.xml
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\ServiceStack.Redis.xml
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\log4net.xml
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\bin\Debug\EntityFramework.xml
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.csprojResolveAssemblyReference.cache
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.dll
+F:\Kayser\VMSGit\VMS\PS.Services.Cache\obj\Debug\PS.Services.Cache.pdb
