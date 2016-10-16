@@ -49,3 +49,20 @@ E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Debug\EntityFramework.Exten
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Debug\EntityFramework.SqlServer.xml
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
 E:\Work Out\SoftoGraphers\VMS\ProSoftApp\PS.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\PS.Data.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\PS.Data.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\EntityFramework.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\EntityFramework.Extended.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\EntityFramework.SqlServer.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\PS.Model.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\PS.Model.pdb
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\EntityFramework.Extended.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\EntityFramework.SqlServer.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\obj\Debug\PS.Data.csprojResolveAssemblyReference.cache
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\obj\Debug\PS.Data.dll
+E:\Development Softwares\From Mizan Bhai\VMS Project\SourceCode\VMS\PS.Data\obj\Debug\PS.Data.pdb
