@@ -1,5 +1,25 @@
 <div>
     <h1>Add Person/Contact</h1>
+<<<<<<< HEAD
     <div ng-include="'app/views/contacts/contacts.html'"></div>
+=======
+    <md-tabs flex md-border-bottom="" md-align-tabs="top" style="min-height:450px !important">
+
+        <md-tab label="Create New">
+            <md-content class="md-padding">
+                <!--<h1 class="md-display-2">Create Vendor</h1>-->
+                <div ng-include="'app/views/contacts/contacts.html'"></div>
+            </md-content>
+        </md-tab>
+
+    </md-tabs>
+    <div layout-gt-sm="row">
+        <md-button type="submit" ng-click="save(contacts)" class="md-raised">
+            <ng-md-icon icon="save"></ng-md-icon>
+            {{entryButtonStatus}}
+        </md-button>
+        <md-button ng-click="reset()" type="button" class="md-accent md-raised md-hue-1">Reset</md-button>
+    </div>
+>>>>>>> a566e28641d4da23f688ed69778abce8a8c801c5
 </div>
 
