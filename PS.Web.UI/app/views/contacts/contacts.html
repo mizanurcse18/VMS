@@ -15,15 +15,14 @@
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-svg-src="/Images/icons/ic_person_24px.svg"></md-icon>
                     <label>Full Name</label>
-                    <input required name="name" ng-model="Contacts.name">
+                    <input required name="name" ng-model="Contact.name">
                     <div ng-messages="form.name.$error" ng-show="form.name.$dirty || form.$submitted">
                         <div ng-message="required">Full Name is Required.</div>
                     </div>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <md-icon md-svg-src="/Images/icons/ic_access_time_24px.svg"></md-icon>
                     <label>Date Of Birth</label>
-                    <md-datepicker name="dateofbirth" ng-model="Contacts.dateofbirth"></md-datepicker>
+                    <md-datepicker name="dateofbirth" ng-model="Contact.dateofbirth"></md-datepicker>
                 </md-input-container>
             </div>
 
@@ -31,13 +30,13 @@
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-svg-src="/Images/icons/ic_place_24px.svg"></md-icon>
                     <label>Curent Address</label>
-                    <textarea name="curentaddress" ng-model="Contacts.curentaddress"></textarea>
+                    <textarea name="curentaddress" ng-model="Contact.curentaddress"></textarea>
                 </md-input-container>
 
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-svg-src="/Images/icons/ic_place_24px.svg"></md-icon>
                     <label>Parmanent Address</label>
-                    <textarea name="parmanentaddress" ng-model="Contacts.parmanentaddress"></textarea>
+                    <textarea name="parmanentaddress" ng-model="Contact.parmanentaddress"></textarea>
                 </md-input-container>
             </div>
 
@@ -57,7 +56,7 @@
                                      placeholder="Write you Head Name here.">
                         <md-item-template>
 
-                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{Contacts.city}}</span>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{Contact.city}}</span>
 
                         </md-item-template>
                         <md-not-found>
@@ -70,12 +69,9 @@
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-svg-src="/Images/icons/ic_visibility_24px.svg"></md-icon>
                     <label>Country</label>
-                    <input name="country" value="Bangladesh" ng-model="Contacts.country">
+                    <input name="country" value="Bangladesh" ng-model="Contact.country">
                 </md-input-container>
             </div>
-
-
-
             <md-divider></md-divider>
             <h2>Contact Information</h2>
             <div layout-gt-sm="row">
@@ -136,16 +132,13 @@
                             <a ng-click="newAction(searchText)">Create a new one!</a>
                         </md-not-found>
                     </md-autocomplete>
-                </md-input-container>
-
+               </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-svg-src="/Images/icons/ic_code_24px.svg"></md-icon>
                     <label>Code</label>
-                    <input type="text" name="code" ng-model="Contacts.code">
+                    <input type="text" name="code" ng-model="Contact.code">
                 </md-input-container>
             </div>
-
-
             <div layout-gt-sm="row">
 
                 <md-input-container class="md-block" flex-gt-sm>
@@ -155,26 +148,19 @@
                 </md-input-container>
 
                 <md-input-container class="md-block" flex-gt-sm>
-                    <md-icon md-svg-src="/Images/icons/ic_access_time_24px.svg"></md-icon>
                     <label>Joining Date</label>
-                    <md-datepicker name="joiningdate" ng-model="Contacts.joiningdate"></md-datepicker>
+                    <md-datepicker name="joiningdate" ng-model="Contact.joiningdate"></md-datepicker>
                 </md-input-container>
-
-
                 <md-input-container class="md-block" flex-gt-sm>
                     <md-icon md-svg-src="/Images/icons/ic_code_24px.svg"></md-icon>
                     <label>Hourly Cost</label>
                     <input name="hourlycost" ng-model="Contact.hourlycost">
                 </md-input-container>
-
                 <md-input-container class="md-block" flex-gt-sm>
-                    <md-icon md-svg-src="/Images/icons/ic_access_time_24px.svg"></md-icon>
                     <label>Discontinution Date</label>
-                    <md-datepicker name="leavedate" ng-model="Contacts.leavedate"></md-datepicker>
+                    <md-datepicker name="leavedate" ng-model="Contact.leavedate"></md-datepicker>
                 </md-input-container>
-
             </div>
-
             <div layout-gt-sm="row">
                 <md-button type="submit" ng-click="save(Contact)">
                     <ng-md-icon icon="save"></ng-md-icon>

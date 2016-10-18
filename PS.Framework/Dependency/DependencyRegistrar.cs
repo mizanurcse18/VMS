@@ -42,11 +42,12 @@ namespace PS.Framework.Dependency
 
             container.RegisterType<IUnitOfWork, UnitOfWork>(new PerRequestLifetimeManager());
             container.RegisterType<IWorkContext, WebWorkContext>(new PerRequestLifetimeManager());
-            //container.RegisterType<IAuthenticationService, AuthenticationService>();
+            container.RegisterType<IAuthenticationService, AuthenticationService>();
+            //container.RegisterType<IACHeadService, ACHeadService>();
             //config.DependencyResolver = new UnityResolver(container);
             //SetupDatabaseFactory();
 
-            //ApplicationSettingsFactory.InitializeApplicationSettingsFactory(container.Resolve<IApplicationSettings>());
+            //ApplicationSettingsFactory.InitializeApplicationSettingsFactory(container);
         }
 
         public static void SetupDatabaseFactory()

@@ -42,9 +42,9 @@ namespace PS.Framework.Filters
                 {
                     var requestObject = actionContext.ActionArguments.Values;
                     string request = JsonConvert.SerializeObject(requestObject, new JsonSerializerSettings
-                                                                  {
-                                                                      ContractResolver = new CamelCasePropertyNamesContractResolver()
-                                                                  });
+                    {
+                        ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    });
 
                     logger.Information(request);
                 }

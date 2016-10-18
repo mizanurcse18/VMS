@@ -1,5 +1,6 @@
 ﻿using PS.Framework.Filters;
 using PS.Model;
+using PS.Model.Models;
 
 namespace PS.Framework
 {
@@ -12,13 +13,13 @@ namespace PS.Framework
         /// <summary>
         /// Gets or sets the current user
         /// </summary>
-        //User CurrentUser { get; }
+        HREmployee CurrentUser { get; }
 
         /// <summary>
         /// Current role, in case user role is impersonated it may be different
         /// </summary>
         Role CurrentRole { get; }
-        //void SetUser(string userGuid, User user, Role impersonatedRole);
+        void SetUser(string userGuid, HREmployee user, Role impersonatedRole);
 
     }
 }

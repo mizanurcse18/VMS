@@ -4,10 +4,10 @@ using ServiceStack.Redis;
 
 namespace PS.Infrastructure.Caching
 {
-    public class CacheManager: ICacheManager
+    public class CacheManager : ICacheManager
     {
-        private  RedisClient redisClient=null;
-        private String hostName=ConfigurationManager.AppSettings["HostName"];
+        private RedisClient redisClient = null;
+        private String hostName = ConfigurationManager.AppSettings["HostName"];
         private int portNumber = int.Parse(ConfigurationManager.AppSettings["PortNumber"]);
 
         /// <summary>
@@ -18,11 +18,11 @@ namespace PS.Infrastructure.Caching
         public T Get<T>(string key)
         {
             using (redisClient = new RedisClient(hostName, portNumber))
-              {
-                   var typedclient = redisClient.As<T>();
-                   return typedclient.GetValue(key);
-              }
-         }
+            {
+                var typedclient = redisClient.As<T>();
+                return typedclient.GetValue(key);
+            }
+        }
 
         /// <summary>
         /// Adds the specified key and object to the cache.
@@ -35,7 +35,7 @@ namespace PS.Infrastructure.Caching
             using (redisClient = new RedisClient(hostName, portNumber))
             {
                 redisClient.Set(key, data, timespan);
-    
+
             }
         }
 
@@ -63,7 +63,7 @@ namespace PS.Infrastructure.Caching
             {
                 return redisClient.ContainsKey(key);
             }
-  
+
         }
 
         /// <summary>
@@ -99,6 +99,6 @@ namespace PS.Infrastructure.Caching
             }
         }
 
- 
+
     }
 }

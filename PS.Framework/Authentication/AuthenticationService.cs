@@ -7,11 +7,11 @@ using Microsoft.Owin.Infrastructure;
 using Microsoft.Owin.Security;
 using Microsoft.Owin.Security.OAuth;
 using PS.Framework.Fakes;
-//using PS.Model.Models;
+using PS.Model.Models;
 
 namespace PS.Framework.Authentication
 {
-    public class AuthenticationService //: IAuthenticationService
+    public class AuthenticationService : IAuthenticationService
     {
 
         /// <summary>
@@ -21,30 +21,30 @@ namespace PS.Framework.Authentication
         /// <param name="options"></param>
         /// <param name="authManager"></param>
         /// <returns></returns>
-        //public string SignIn(User user, OAuthAuthorizationServerOptions options, IAuthenticationManager authManager)
-        //{
+        public string SignIn(HREmployee user, OAuthAuthorizationServerOptions options, IAuthenticationManager authManager)
+        {
 
-        //    ClaimsIdentity identity = new ClaimsIdentity(options.AuthenticationType);
+            ClaimsIdentity identity = new ClaimsIdentity(options.AuthenticationType);
 
-        //    identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
-        //    //identity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
-        //    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.UserID.ToString()));
-
-
-        //    AuthenticationTicket ticket = new AuthenticationTicket(identity, new AuthenticationProperties());
-
-        //    var currentUtc = new SystemClock().UtcNow;
-        //    ticket.Properties.IssuedUtc = currentUtc;
-
-        //    // TODO:
-        //    // Commented inorder to avoid authorization timeout after 1 hour. 
-        //    //ticket.Properties.ExpiresUtc = currentUtc.Add(TimeSpan.FromMinutes(60));      
+            identity.AddClaim(new Claim(ClaimTypes.Name, user.Name));
+            //identity.AddClaim(new Claim(ClaimTypes.Role, user.Role.ToString()));
+            identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()));
 
 
-        //    authManager.SignIn(identity);
+            AuthenticationTicket ticket = new AuthenticationTicket(identity, new AuthenticationProperties());
 
-        //    return options.AccessTokenFormat.Protect(ticket);
-        //}
+            var currentUtc = new SystemClock().UtcNow;
+            ticket.Properties.IssuedUtc = currentUtc;
+
+            // TODO:
+            // Commented inorder to avoid authorization timeout after 1 hour. 
+            //ticket.Properties.ExpiresUtc = currentUtc.Add(TimeSpan.FromMinutes(60));      
+
+
+            authManager.SignIn(identity);
+
+            return options.AccessTokenFormat.Protect(ticket);
+        }
 
         /// <summary>
         /// Signout

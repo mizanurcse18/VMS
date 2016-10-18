@@ -5,7 +5,7 @@ using System.Web.Http;
 using Microsoft.Owin.Security.OAuth;
 using Microsoft.Practices.Unity;
 using Newtonsoft.Json.Serialization;
-using ProductStore.Resolver;
+
 using PS.Service;
 using PS.Web.UI.Helpers;
 
