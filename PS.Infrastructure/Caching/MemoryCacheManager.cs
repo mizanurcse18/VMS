@@ -36,7 +36,7 @@ namespace PS.Infrastructure.Caching
             catch (Exception ex)
             {
                 throw ex;
-            } 
+            }
         }
 
         /// <summary>

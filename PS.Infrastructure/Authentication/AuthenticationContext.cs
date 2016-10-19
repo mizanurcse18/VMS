@@ -25,7 +25,7 @@ namespace PS.Infrastructure.Authentication
             get
             {
                 var usernameClaim =
-                    OwinContext.Authentication.User.Claims.SingleOrDefault(a => a.Type == ClaimTypes.Name);                
+                    OwinContext.Authentication.User.Claims.SingleOrDefault(a => a.Type == ClaimTypes.Name);
                 if (usernameClaim == null)
                 {
                     return null;

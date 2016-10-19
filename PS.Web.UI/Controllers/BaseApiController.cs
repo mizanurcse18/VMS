@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web.Http;
 using PS.Framework;
 using PS.Infrastructure;
-
+using PS.Model.Models;
 using PS.Service;
 using PS.Web.UI.Helpers;
 using PS.Web.UI.Models;
@@ -59,13 +59,13 @@ namespace PS.Web.UI.Controllers
             }
         }
 
-        //protected User CurrentUser
-        //{
-        //    get
-        //    {
-        //        return workContext.CurrentUser;
-        //    }
-        //}
+        protected HREmployee CurrentUser
+        {
+            get
+            {
+                return workContext.CurrentUser;
+            }
+        }
         protected bool IsNew(string id)
         {
             return MisUtil.IsNew(id);

@@ -1,7 +1,8 @@
 using System.Web.Http;
-using System.Web.Mvc;
+//using System.Web.Mvc;
 using Microsoft.Practices.Unity;
-using Microsoft.Practices.Unity.Mvc;
+//using Microsoft.Practices.Unity.Mvc;
+using Unity.WebApi;
 using PS.Framework.Dependency;
 
 namespace PS.Web.UI
@@ -23,11 +24,11 @@ namespace PS.Web.UI
             // e.g. container.RegisterType<ITestService, TestService>();
             DependencyRegistrar.RegisterComponents(container);
 
-            DependencyResolver.SetResolver(new UnityDependencyResolver(container));
-            
-            container.RegisterInstance(typeof(HttpConfiguration), GlobalConfiguration.Configuration);
+            //DependencyResolver.SetResolver(new UnityDependencyResolver(container));
 
-            GlobalConfiguration.Configuration.DependencyResolver = new Unity.WebApi.UnityDependencyResolver(container);
+            //container.RegisterInstance(typeof(HttpConfiguration), GlobalConfiguration.Configuration);
+
+            GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);//Unity.WebApi.UnityDependencyResolver(container);
 
         }
 

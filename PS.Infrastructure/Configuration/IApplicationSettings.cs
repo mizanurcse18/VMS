@@ -4,6 +4,6 @@
     {
         int NumberOfResultsPerPage { get; }
         string LoggerName { get; }
-      
+
     }
 }

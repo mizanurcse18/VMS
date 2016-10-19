@@ -10,13 +10,13 @@ namespace PS.Framework.Filters
         {
             HttpContext ctx = default(HttpContext);
             ctx = HttpContext.Current;
-       
+
             base.OnActionExecuting(context);
 
             if (ctx.User.Identity.IsAuthenticated == false)
-            {                               
-                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Account", action = "Index" }));               
-            }           
+            {
+                context.Result = new RedirectToRouteResult(new RouteValueDictionary(new { controller = "Account", action = "Index" }));
+            }
         }
-    } 
+    }
 }

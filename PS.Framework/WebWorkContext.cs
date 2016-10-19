@@ -4,7 +4,7 @@ using PS.Framework.Authentication;
 using PS.Framework.Filters;
 using PS.Infrastructure.Caching;
 using PS.Model;
-
+using PS.Model.Models;
 using PS.Services.Cache;
 
 namespace PS.Framework
@@ -63,23 +63,23 @@ namespace PS.Framework
 
         #endregion
 
-        //public void SetUser(string userGuid, User user, Role impersonatedRole)
-        //{
-        //    cacheManager.Set(GetUserEntityKey(userGuid), user, TimeSpan.FromDays(1));
-        //    cacheManager.Set(GetRoleEntityKey(userGuid), impersonatedRole);
+        public void SetUser(string userGuid, HREmployee user, Role impersonatedRole)
+        {
+            cacheManager.Set(GetUserEntityKey(userGuid), user, TimeSpan.FromDays(1));
+            cacheManager.Set(GetRoleEntityKey(userGuid), impersonatedRole);
 
 
-        //    //cacheManager.Set(GetBroadcasterEntityKey(userGuid), broadcaster);
-        //    //cacheManager.Set(GetShowEntityKey(userGuid), new Show());
-        //}
+            //cacheManager.Set(GetBroadcasterEntityKey(userGuid), broadcaster);
+            //cacheManager.Set(GetShowEntityKey(userGuid), new Show());
+        }
 
-        //public User CurrentUser
-        //{
-        //    get
-        //    {
-        //        return cacheManager.Get<User>(GetUserEntityKey());
-        //    }
-        //}
+        public HREmployee CurrentUser
+        {
+            get
+            {
+                return cacheManager.Get<HREmployee>(GetUserEntityKey());
+            }
+        }
 
         public Role CurrentRole
         {

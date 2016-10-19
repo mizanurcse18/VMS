@@ -7,7 +7,7 @@ namespace PS.Web.UI
     public static class UnityWebActivator
     {
         /// <summary>Integrates Unity when the application starts.</summary>
-        public static void Start() 
+        public static void Start()
         {
             UnityConfig.RegisterComponents();
 
@@ -23,8 +23,8 @@ namespace PS.Web.UI
         /// <summary>Disposes the Unity container when the application is shut down.</summary>
         public static void Shutdown()
         {
-           // var container = UnityConfig.GetConfiguredContainer();
-           // container.Dispose();
+            // var container = UnityConfig.GetConfiguredContainer();
+            // container.Dispose();
         }
     }
 }
