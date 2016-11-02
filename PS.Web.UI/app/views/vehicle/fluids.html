@@ -6,11 +6,50 @@
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Fuel Type</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.fuelType"
+                                     md-search-text="searchFuelType"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchFuelType)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchFuelType)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Type Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchFuelType" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchFuelType}}" were found.
+                            <a ng-click="newAction(searchFuelType)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Fuel Tank 1 Capacity</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <label>Fuel Tank Capacity</label>
+                    <input type="number" name="fuelTankCapacity" ng-model="Vehicle.fuelTankCapacity">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Fuel Unit</label>
+                    <md-switch class="md-primary" name="fuelUnit" md-no-ink aria-label="Switch No Ink" ng-model="Vehicle.fuelUnit">
+
+                    </md-switch>
+                </md-input-container>
+            </div>
+            <h2>Oil</h2>
+            <div layout-gt-sm="row">
+                
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Oil Capacity</label>
+                    <input type="number" name="oilCapacity" ng-model="Vehicle.oilCapacity">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Measurement Unit</label>
+                    <md-switch class="md-primary" name="measurementUnit" md-no-ink aria-label="Switch No Ink" ng-model="Vehicle.measurementUnit">
+
+                    </md-switch>
                 </md-input-container>
             </div>
         </form>

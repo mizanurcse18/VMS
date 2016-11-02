@@ -2,70 +2,113 @@
      ng-init="height = 3" ng-mouseenter="height = 6" ng-mouseleave="height = 3">
     <div class="md-inline-form" layout="column">
         <form name="form" novalidate id="top">
-            <h2>Dimensions</h2>
+            <h2>Vehicle Body</h2>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Width (in)</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <label>Color</label>
+                    <input name="color" ng-model="Vehicle.color">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Height (in)</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <label>Body Type</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.bodyType"
+                                     md-search-text="searchBodyType"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchBodyType)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchBodyType)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Body Type Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchBodyType" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchBodyType}}" were found.
+                            <a ng-click="newAction(searchBodyType)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Length (in) </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Interior Volume (ft3) </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
-                </md-input-container>
-            </div>
+                </div>
+                <h2>Dimensions</h2>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Width (in)</label>
+                        <input type="number" name="width" ng-model="Vehicle.width">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Height (in)</label>
+                        <input type="number" name="height" ng-model="Vehicle.height">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Length (in) </label>
+                        <input type="number" name="length" ng-model="Vehicle.length">
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Interior Volume (ft3) </label>
+                        <input type="number" name="interiorVolume" ng-model="Vehicle.interiorVolume">
+                    </md-input-container>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Passenger Volume (ft3)</label>
+                        <textarea name="passengerVolume" ng-model="Vehicle.passengerVolume"></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Cargo Volume</label>
+                        <textarea name="cargoVolume" ng-model="Vehicle.cargoVolume"></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Ground Clearance</label>
+                        <textarea name="groundClearance" ng-model="Vehicle.groundClearance"></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Bed Length</label>
+                        <textarea name="bedLength" ng-model="Vehicle.bedLength"></textarea>
+                    </md-input-container>
+                </div>
+                <h2>Performance</h2>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Towing Capacity</label>
+                        <textarea name="towningCapacity" ng-model="Vehicle.towningCapacity"></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Max Payload</label>
+                        <textarea name="maxPayload" ng-model="Vehicle.maxPayload"></textarea>
+                    </md-input-container>
+                    </md-input-container>
+                </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Passenger Volume (ft3)</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <label>MSRP</label>
+                    <textarea name="msrp" ng-model="Vehicle.msrp"></textarea>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Cargo Volume</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <label>Curb Weight</label>
+                    <textarea name="curbWeight" ng-model="Vehicle.curbWeight"></textarea>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Ground Clearance</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Bed Length</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <label>Gross Vehicle Weight</label>
+                    <textarea name="grossVehicleWeight" ng-model="Vehicle.grossVehicleWeight"></textarea>
                 </md-input-container>
             </div>
-            <h2>Performance</h2>
-            <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Towing Capacity</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Max Payload</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                </md-input-container>
-            </div>
-            <h2>Fuel Economy</h2>
-            <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>EPA City</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>EPA Highway</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>EPA Combined</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-            </div>
-        </form>
+                <h2>Fuel Economy</h2>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>EPA City</label>
+                        <textarea name="epaCity" ng-model="Vehicle.epaCity"></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>EPA Highway</label>
+                        <textarea name="epaHighway" ng-model="Vehicle.epaHighway"></textarea>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>EPA Combined</label>
+                        <textarea name="epaCombined" ng-model="Vehicle.epaCombined"></textarea>
+                    </md-input-container>
+                </div>
+</form>
     </div>
 </div>

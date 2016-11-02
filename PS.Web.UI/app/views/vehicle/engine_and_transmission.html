@@ -6,82 +6,140 @@
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Engine Summary </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <textarea name="engineSummary" ng-model="Vehicle.engineSummary"></textarea>
                 </md-input-container>
+                </div>
+            <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Engine Brand </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <label>Engine Brand</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.engineBrand"
+                                     md-search-text="searchEngineBrand"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchEngineBrand)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchEngineBrand)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Engine Brand Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchEngineBrand" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchEngineBrand}}" were found.
+                            <a ng-click="newAction(searchEngineBrand)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Bore (in) </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="bore" ng-model="Vehicle.bore">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Compression </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="compression" ng-model="Vehicle.compression">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Cylinders </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="cylinders" ng-model="Vehicle.cylinders">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Displacement </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="displacement" ng-model="Vehicle.displacement">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Fuel Induction </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="fuelInduction" ng-model="Vehicle.fuelInduction">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Fuel Quality  </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="fuelQuality" ng-model="Vehicle.fuelQuality">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Max HP </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="maxHp" ng-model="Vehicle.maxHp">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Max Torque</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <input type="number" name="maxTorque" ng-model="Vehicle.maxTorque">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Redline RPM</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <input type="number" name="redlineRpm" ng-model="Vehicle.redlineRpm">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Stroke</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <input type="number" name="stroke" ng-model="Vehicle.stroke">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Valves</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <input type="number" name="valves" ng-model="Vehicle.valves">
                 </md-input-container>
             </div>
             <h2>Transmission</h2>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Transmission Summary </label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <textarea name="transmissionSummary" ng-model="Vehicle.transmissionSummary"></textarea>
                 </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Transmission Brand</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Transmission Type</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Transmission Gears</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-            </div>
+                </div>
+                <div layout-gt-sm="row">
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Transmission Brand</label>
+                        <md-autocomplete ng-disabled="isDisabled"
+                                         ng-model="Vehicle.transmissionBrand"
+                                         md-search-text="searchTransmissionBrand"
+                                         md-no-cache="noCache"
+                                         md-selected-item="selectedItem"
+                                         md-search-text-change="searchTextChange(searchTransmissionBrand)"
+                                         md-selected-item-change="selectedItemChange(item)"
+                                         md-items="item in querySearch(searchTransmissionBrand)"
+                                         md-item-text="item.name"
+                                         md-min-length="0"
+                                         placeholder="Write Brand Name here.">
+                            <md-item-template>
+                                <span md-highlight-text="searchTransmissionBrand" md-highlight-flags="^i">{{item.name}}</span>
+                            </md-item-template>
+                            <md-not-found>
+                                No Action matching "{{searchTransmissionBrand}}" were found.
+                                <a ng-click="newAction(searchTransmissionBrand)">Create a new one!</a>
+                            </md-not-found>
+                        </md-autocomplete>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Transmission Type</label>
+                        <md-autocomplete ng-disabled="isDisabled"
+                                         ng-model="Vehicle.transmissionType"
+                                         md-search-text="searchTransmissionType"
+                                         md-no-cache="noCache"
+                                         md-selected-item="selectedItem"
+                                         md-search-text-change="searchTextChange(searchTransmissionType)"
+                                         md-selected-item-change="selectedItemChange(item)"
+                                         md-items="item in querySearch(searchTransmissionType)"
+                                         md-item-text="item.name"
+                                         md-min-length="0"
+                                         placeholder="Write Brand Name here.">
+                            <md-item-template>
+                                <span md-highlight-text="searchTransmissionType" md-highlight-flags="^i">{{item.name}}</span>
+                            </md-item-template>
+                            <md-not-found>
+                                No Action matching "{{searchTransmissionType}}" were found.
+                                <a ng-click="newAction(searchTransmissionType)">Create a new one!</a>
+                            </md-not-found>
+                        </md-autocomplete>
+                    </md-input-container>
+                    <md-input-container class="md-block" flex-gt-sm>
+                        <label>Transmission Gears</label>
+                        <textarea name="transmissionGears" ng-model="Vehicle.transmissionGears"></textarea>
+                    </md-input-container>
+                </div>
         </form>
     </div>
 </div>

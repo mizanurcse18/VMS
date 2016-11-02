@@ -5,67 +5,135 @@
             <h2>Wheels & Tires</h2>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Drive Type </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <label>Drive Type</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.driveType"
+                                     md-search-text="searchDriveType"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchDriveType)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchDriveType)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Type Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchDriveType" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchDriveType}}" were found.
+                            <a ng-click="newAction(searchDriveType)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Brake System</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.brakeSystem"
+                                     md-search-text="searchBrakeSystem"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchBrakeSystem)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchBrakeSystem)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Brake System Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchBrakeSystem" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchBrakeSystem}}" were found.
+                            <a ng-click="newAction(searchBrakeSystem)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Front Track Width</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="frontTrackWidth" ng-model="Vehicle.frontTrackWidth">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Rear Track Width </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="rearTrackWidth" ng-model="Vehicle.rearTrackWidth">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Wheelbase </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="wheelBase" ng-model="Vehicle.wheelBase">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Front Wheel Diamete </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <label>Front Wheel Diameter </label>
+                    <input type="number" name="frontWheelDiameter" ng-model="Vehicle.frontWheelDiameter">
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Rear Wheel Diameter  </label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="rearWheelDiameter" ng-model="Vehicle.rearWheelDiameter">
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Rear Axle</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <input type="number" name="rearAxle" ng-model="Vehicle.rearAxle">
                 </md-input-container>
+                </div>
+            <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Front Tire Type</label>
-                    <input type="number" name="name" ng-model="Vehicle.name">
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.frontTireType"
+                                     md-search-text="searchFrontTireType"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchFrontTireType)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchFrontTireType)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Type Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchFrontTireType" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchFrontTireType}}" were found.
+                            <a ng-click="newAction(searchFrontTireType)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Front Tire PSI</label>
+                    <textarea name="fronttirepsi" ng-model="Vehicle.frontTirePsi"></textarea>
                 </md-input-container>
             </div>
             <div layout-gt-sm="row">
                 <md-input-container class="md-block" flex-gt-sm>
-                    <label>Front Tire PSI</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Rear Tire Type </label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <label>Rear Tire Type</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="Vehicle.rearTireType"
+                                     md-search-text="searchRearTireType"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchRearTireType)"
+                                     md-selected-item-change="selectedItemChange(item)"
+                                     md-items="item in querySearch(searchRearTireType)"
+                                     md-item-text="item.name"
+                                     md-min-length="0"
+                                     placeholder="Write Type Name here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchRearTireType" md-highlight-flags="^i">{{item.name}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchRearTireType}}" were found.
+                            <a ng-click="newAction(searchRearTireType)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
                 </md-input-container>
                 <md-input-container class="md-block" flex-gt-sm>
                     <label>Rear Tire PSI</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
+                    <textarea name="reartirepsi" ng-model="Vehicle.rearTirePsi"></textarea>
                 </md-input-container>
             </div>
-            <h2>Oil</h2>
-            <div layout-gt-sm="row">
-                <md-input-container class="md-block" flex-gt-sm>
-                    <label>Oil Capacity</label>
-                    <textarea name="name" ng-model="Vehicle.name"></textarea>
-                </md-input-container>
-            </div>
+            
         </form>
     </div>
 </div>
