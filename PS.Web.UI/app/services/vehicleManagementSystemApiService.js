@@ -18,8 +18,8 @@
 
     function vehicleManagementSystemApiService($http, $q) {
         return {
-            //Contacts
-            saveContact: function (contact) {
+            //HREmployee
+            saveHREmployee: function (contact) {
                 var deferred = $q.defer();
                 $http({
                     url: '/api/VMS/HREmployee/Save',
@@ -28,22 +28,31 @@
                 }).success(deferred.resolve).error(deferred.reject);
                 return deferred.promise;
             },
-            getAllContacts: function (contact, pageSize) {
+            getAllHREmployee: function (contact, pageSize, currentPage) {
                 var deferred = $q.defer();
                 $http({
                     url: '/api/VMS/HREmployee/GetAll',
                     method: 'POST',
-                    params: { 'pageSize': pageSize },
+                    params: { 'pageSize': pageSize, 'currentPage': currentPage },
                     data: contact
                 }).success(deferred.resolve).error(deferred.reject);
                 return deferred.promise;
             },
-            deleteContact: function (contact) {
+            hasHREmployee: function (obj) {
+                var deferred = $q.defer();
+                $http({
+                    url: '/api/VMS/HREmployee/HasHREmployee',
+                    method: 'POST',
+                    data: obj
+                }).success(deferred.resolve).error(deferred.reject);
+                return deferred.promise;
+            },
+            deleteHREmployee: function (obj) {
                 var deferred = $q.defer();
                 $http({
                     url: '/api/VMS/HREmployee/Delete',
                     method: 'POST',
-                    data: contact
+                    data: obj
                 }).success(deferred.resolve).error(deferred.reject);
                 return deferred.promise;
             }

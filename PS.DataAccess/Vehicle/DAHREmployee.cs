@@ -47,7 +47,7 @@ namespace PS.DataAccess.Vehicle
             }
 
             connection.Open();
-            SqlCommand cmd = new SqlCommand("HREmployee", connection);
+            SqlCommand cmd = new SqlCommand("HREmployee_Detailed", connection);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@PageSize", SqlDbType.Int).Value = pageSize;
             cmd.Parameters.Add("@CurrentPage", SqlDbType.Int).Value = currentPage;

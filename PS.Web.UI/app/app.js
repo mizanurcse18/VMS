@@ -10,7 +10,7 @@
  */
 (function () {
     'use strict';
-    angular.module('vehicleManagementSystem', ['ngMaterial', 'ngMdIcons', 'ngRoute', 'ngMessages', 'cfp.hotkeys', 'data-table']).
+    angular.module('vehicleManagementSystem', ['ngMaterial', 'ngMdIcons', 'ngRoute', 'ngMessages', 'cfp.hotkeys', 'data-table', 'cl.paging']).
         config(function ($mdIconProvider, $mdThemingProvider) {
             $mdIconProvider
                 .icon('menu', '../Images/icons/menu.svg', 24)

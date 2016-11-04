@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using PS.Data.Infrastructure;
 using PS.Data.Repository;
+using PS.DataAccess.Vehicle;
 using PS.Model.Models;
 
 
@@ -23,7 +24,7 @@ namespace PS.Service
     {
         private readonly IHREmployeeRepository _HREmployeeRepository;
         private readonly IUnitOfWork unitOfWork;
-        //DAHREmployee daHREmployee = new DAHREmployee();
+        DAHREmployee hrEmployeeDA = new DAHREmployee();
 
         public HREmployeeService()
         {
@@ -83,8 +84,7 @@ namespace PS.Service
         }
         public IEnumerable<HREmployee> Get(int pageSize, int currentPage, string sortExpression, string filterExpression)
         {
-            return _HREmployeeRepository.GetAll();
-            //return daHREmployee.Get(pageSize, currentPage, sortExpression, filterExpression);
+            return hrEmployeeDA.Get(pageSize, currentPage, sortExpression, filterExpression);
         }
         public IEnumerable<HREmployee> Get()
         {

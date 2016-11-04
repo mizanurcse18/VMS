@@ -1,5 +1,208 @@
-<div>
-    <h1>Add Person/Contact</h1>
-    <div ng-include="'app/views/contacts/contacts.html'"></div>
+<div id="contacts" class="page-layout simple left-sidenav inner-sidenav">
+    <div class="header md-accent-bg layout-align-space-between-center layout-row" layout="row" layout-align="space-between center">
+        <div layout="row" layout-align="start center" class="layout-align-start-center layout-row">
+            <!--<button class="md-icon-button sidenav-toggle md-button ng-scope md-default-theme md-ink-ripple hide-gt-md" type="button"
+                    ng-transclude="" hide-gt-md="" ng-click="vm.toggleSidenav('sidenav')" aria-label="Toggle sidenav" translate=""
+                    translate-attr-aria-label="CONTACTS.TOGGLE_SIDENAV">
+                <md-icon md-font-icon="icon-menu" class="icon ng-scope md-default-theme md-font material-icons icon-menu" aria-hidden="true"></md-icon>
+            </button>-->
+            <div class="logo layout-align-start-center layout-row" layout="row" layout-align="start center">
+                <span class="logo-icon">
+                    <ng-md-icon icon="contacts" aria-hidden="true">
+                    </ng-md-icon>
+                </span>
+                <span class="logo-text">Contacts</span>
+            </div>
+        </div>
+        <div class="search-input-wrapper layout-align-start-center layout-row" layout="row" layout-align="start center">
+            <label for="search">
+                <ng-md-icon icon="search">
+                </ng-md-icon>
+            </label>
+            <md-input-container md-no-float="" class="m-0 md-input-has-placeholder md-default-theme md-input-has-value">
+                <input id="search" placeholder="Search for anyone" type="text" ng-model="vm.search" translate="" translate-attr-placeholder="CONTACTS.SEARCH_FOR_ANYONE"
+                       class="ng-valid ng-scope md-input ng-touched ng-dirty ng-valid-parse ng-not-empty" aria-label="Search for anyone" aria-invalid="false" style="">
+                <div class="md-errors-spacer">
+
+                </div>
+            </md-input-container>
+        </div>
+
+    </div>
+    <form name="form" novalidate id="top">
+            <div layout-gt-xs="row" ng-hide="true">
+                <md-input-container class="md-block" flex-gt-xs>
+                    <input ng-model="HREmployee.id">
+                </md-input-container>
+            </div>
+
+            <h2>Basic Information</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_person_24px.svg"></md-icon>
+                    <label>Full Name</label>
+                    <input required name="name" ng-model="HREmployee.name">
+                    <div ng-messages="form.name.$error" ng-show="form.name.$dirty || form.$submitted">
+                        <div ng-message="required">Full Name is Required.</div>
+                    </div>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Date Of Birth</label>
+                    <md-datepicker name="dateOfBirth" ng-model="HREmployee.dateOfBirth"></md-datepicker>
+                </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_place_24px.svg"></md-icon>
+                    <label>Curent Address</label>
+                    <textarea name="curentAddress" ng-model="HREmployee.curentAddress"></textarea>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_place_24px.svg"></md-icon>
+                    <label>Parmanent Address</label>
+                    <textarea name="parmanentAddress" ng-model="HREmployee.parmanentAddress"></textarea>
+                </md-input-container>
+            </div>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_more_vert_24px.svg"></md-icon>
+                    <label>City</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="HREmployee.city"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-selected-item-change="selectedItemChange(HREmployee)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="HREmployee.city"
+                                     md-min-length="0"
+                                     placeholder="Write you Head Name here.">
+                        <md-item-template>
+
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{HREmployee.city}}</span>
+
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_visibility_24px.svg"></md-icon>
+                    <label>Country</label>
+                    <input name="country" value="Bangladesh" ng-model="HREmployee.country">
+                </md-input-container>
+            </div>
+            <md-divider></md-divider>
+            <h2>HREmployee Information</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_phone_24px.svg"></md-icon>
+                    <label>Primary HREmployee Number</label>
+                    <input name="contactNumber1" ng-model="HREmployee.contactNumber1">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_phone_24px.svg"></md-icon>
+                    <label>Secondary HREmployee Number</label>
+                    <input name="contactNumber2" ng-model="HREmployee.contactNumber2">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_email_24px.svg" class="email"></md-icon>
+                    <label>Email</label>
+                    <input name="email" ng-model="HREmployee.email">
+                </md-input-container>
+            </div>
+
+            <md-divider></md-divider>
+            <h2>Identification Information</h2>
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_label_24px.svg"></md-icon>
+                    <label>National ID Number</label>
+                    <input name="nidNumber" ng-model="HREmployee.nidNumber">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_label_24px.svg"></md-icon>
+                    <label>Driving Licence Number</label>
+                    <input name="drivingLicenceNumber" ng-model="HREmployee.drivingLicenceNumber">
+                </md-input-container>
+            </div>
+
+            <md-divider></md-divider>
+            <h2>Organizational Information</h2>
+
+            <div layout-gt-sm="row">
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_more_vert_24px.svg"></md-icon>
+                    <label>Select Type</label>
+                    <md-autocomplete ng-disabled="isDisabled"
+                                     ng-model="HREmployee.type"
+                                     md-search-text="searchText"
+                                     md-no-cache="noCache"
+                                     md-selected-item="selectedItem"
+                                     md-search-text-change="searchTextChange(searchText)"
+                                     md-items="item in querySearch(searchText)"
+                                     md-item-text="HREmployee.type"
+                                     md-min-length="0"
+                                     placeholder="Write contact type here.">
+                        <md-item-template>
+                            <span md-highlight-text="searchText" md-highlight-flags="^i">{{HREmployee.type}}</span>
+                        </md-item-template>
+                        <md-not-found>
+                            No Action matching "{{searchText}}" were found.
+                            <a ng-click="newAction(searchText)">Create a new one!</a>
+                        </md-not-found>
+                    </md-autocomplete>
+               </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_code_24px.svg"></md-icon>
+                    <label>Code</label>
+                    <input type="text" name="code" ng-model="HREmployee.code">
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_play_arrow_24px.svg"></md-icon>
+                    <label>Designation</label>
+                    <input name="designation" ng-model="HREmployee.designation">
+                </md-input-container>
+
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Joining Date</label>
+                    <md-datepicker name="joiningDate" ng-model="HREmployee.joiningDate"></md-datepicker>
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <md-icon md-svg-src="/Images/icons/ic_code_24px.svg"></md-icon>
+                    <label>Hourly Cost</label>
+                    <input name="hourlyCost" ng-model="HREmployee.hourlyCost">
+                </md-input-container>
+                <md-input-container class="md-block" flex-gt-sm>
+                    <label>Discontinution Date</label>
+                    <md-datepicker name="leaveDate" ng-model="HREmployee.leaveDate"></md-datepicker>
+                </md-input-container>
+            </div>
+            <div layout-gt-sm="row">
+                <md-button type="submit" ng-click="save(HREmployee)">
+                    <ng-md-icon icon="save"></ng-md-icon>
+                    {{entryButtonStatus}}
+                </md-button>
+                <md-button ng-click="reset()">
+                    <ng-md-icon icon="refresh">
+                    </ng-md-icon>Reset
+                </md-button>
+            </div>
+        </form>
+    <div ng-include="'app/views/contacts/contactList.html'"></div>
 </div>
+
+
+
+
+
 
